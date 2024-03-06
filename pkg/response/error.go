@@ -26,3 +26,18 @@ func Internal(c *gin.Context, err error) {
 func BadRequest(c *gin.Context, err error) {
 	respond(c, http.StatusBadRequest, err)
 }
+
+// NotFound sends not found error
+func NotFound(c *gin.Context, err error) {
+	respond(c, http.StatusNotFound, err)
+}
+
+// Forbidden sends not found error
+func Forbidden(c *gin.Context, err error) {
+	respond(c, http.StatusForbidden, err)
+}
+
+// UnAuthorized sends not found error
+func UnAuthorized(c *gin.Context, err error) {
+	respond(c, http.StatusUnauthorized, err)
+}
